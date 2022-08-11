@@ -8,6 +8,7 @@ namespace AddressBook1
 {
     public class AddressBook
     {
+        List<Contacts> add = new List<Contacts>();
         public void AddContact()
         {
             Contacts con = new Contacts();
@@ -26,7 +27,23 @@ namespace AddressBook1
             Console.WriteLine("Enter Phone Number");
             con.Phonenumbe = long.Parse(Console.ReadLine());
 
-            
+            add.Add(con);
         }
+
+        public void Display()
+        {
+            foreach (Contacts data in add)
+            {
+                Console.WriteLine("Firstname:"+data.FirstName);
+                Console.WriteLine("Lastname:" + data.LastName);
+                Console.WriteLine("Address:"+data.Address);
+                Console.WriteLine("city:"+data.City);
+                Console.WriteLine("state:"+data.State);
+                Console.WriteLine("Zipcode:"+data.ZipCode);
+                Console.WriteLine("PhoneNumber:"+data.Phonenumbe);
+
+            }
+        }
+
     }
 }
