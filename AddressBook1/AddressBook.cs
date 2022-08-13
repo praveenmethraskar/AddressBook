@@ -96,5 +96,18 @@ namespace AddressBook1
             }
         }
 
+        public void DeleteContact(string personName)
+        {
+            for (int i = 0; i < add.Count; i++)
+            {
+                if (add[i].FirstName == personName)
+                {
+                    Console.WriteLine("Record {0} succesfully deleted", add[i].FirstName);
+                    add.RemoveAt(i);
+
+                }
+            }
+        }
+
     }
 }

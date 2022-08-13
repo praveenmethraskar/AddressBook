@@ -14,6 +14,6 @@ namespace AddressBook1
         public string City { get; set; }
         public string State { get; set; }
         public long ZipCode { get; set; }
-        public long Phonenumbe { get; set; }
+        public long Phonenumber { get; set; }
     }
 }
