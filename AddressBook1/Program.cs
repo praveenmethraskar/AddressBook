@@ -6,31 +6,48 @@ namespace AddressBook1
     {
         public static void Main(String[] args)
         {
-            AddressBook add = new AddressBook();
-
+            Console.WriteLine("Address Book!");
+            AddressBook contact1 = new AddressBook();
             while (true)
             {
-                Console.WriteLine("1-add,2-display,3-Edit");
+                Console.WriteLine("Enter the option : \n1)Add Contact\n2)Display contact\n3 Edit Contact\n4)Remove Contact\n5)Add Multiple Contacts \n6)AddUniqueContacts\n7)Display Unique contacts\n8) Search name by City or State ");
                 int option = Convert.ToInt32(Console.ReadLine());
+
                 switch (option)
                 {
                     case 1:
-                        add.AddContact();
+                        contact1.AddPerson();
                         break;
                     case 2:
-                        add.Display();
+                        contact1.Display();
                         break;
                     case 3:
-                        add.EditContact();
+                        contact1.edit();
                         break;
                     case 4:
-                        Console.WriteLine("Enter name to delete record");
-                        string name = Console.ReadLine();
-                        add.DeleteContact(name);
+                        contact1.RemoveContact();
                         break;
-
+                    case 5:
+                        Console.WriteLine("Please enter number of contacts you want to add : ");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        contact1.AddMultipleContacts(n);
+                        break;
+                    case 6:
+                        contact1.AddUniqueContacts();
+                        break;
+                    case 7:
+                        contact1.DisplayUniqueContacts();
+                        break;
+                    case 8:
+                        contact1.SearchByCityState();
+                        break;
+                    default:
+                        Console.WriteLine("Please choose correct option");
+                        break;
                 }
+
             }
+
         }
     }
 }
