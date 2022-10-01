@@ -10,7 +10,7 @@ namespace AddressBook1
             AddressBook contact1 = new AddressBook();
             while (true)
             {
-                Console.WriteLine("Enter the option : \n1)Add Contact\n2)Display contact\n3 Edit Contact\n4)Remove Contact\n5)Add Multiple Contacts \n6)AddUniqueContacts\n7)Display Unique contacts\n8) Search name by City or State ");
+                Console.WriteLine("Enter the option : \n1)Add Contact\n2)Display contact\n3 Edit Contact\n4)Remove Contact\n5)Add Multiple Contacts \n6)AddUniqueContacts\n7)Display Unique contacts\n8)Search name by City or State\n9)Get Count of Persons by City or State");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -40,6 +40,9 @@ namespace AddressBook1
                         break;
                     case 8:
                         contact1.SearchByCityState();
+                        break;
+                    case 9:
+                        contact1.CountByCityState();
                         break;
                     default:
                         Console.WriteLine("Please choose correct option");
